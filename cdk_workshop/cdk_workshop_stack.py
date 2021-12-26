@@ -4,6 +4,8 @@ from aws_cdk import (
     aws_lambda as _lambda,
     aws_apigateway as apigw,
 )
+# More constructs in
+# https://docs.aws.amazon.com/cdk/api/v1/python/index.html
 
 
 class CdkWorkshopStack(Stack):
