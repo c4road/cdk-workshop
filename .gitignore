@@ -1,3 +1,7 @@
+cdk-notas.md
+cdk-workshop.code-workspace
+cdk_workshop/old_cdk_workshop_stack.py
+
 *.swp
 package-lock.json
 .pytest_cache
