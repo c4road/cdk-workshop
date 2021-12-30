@@ -24,3 +24,6 @@ venv.bak/
 # CDK Context & Staging files
 .cdk.staging/
 cdk.out/
+
+# pyenv conf file
+.python-version
