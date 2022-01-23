@@ -6,6 +6,7 @@ from aws_cdk import (
 )
 # More constructs in
 # https://docs.aws.amazon.com/cdk/api/v1/python/index.html
+from .hitcounter import HitCounter
 
 
 class CdkWorkshopStack(Stack):
@@ -20,7 +21,13 @@ class CdkWorkshopStack(Stack):
             handler='hello.handler',
         )
 
+        hello_with_counter = HitCounter(
+            self, 'HelloHitCounter',
+            downstream=my_lambda,
+        )
         apigw.LambdaRestApi(
             self, 'Endpoint',
-            handler=my_lambda,
+            handler=hello_with_counter._handler,
         )
+
+        
